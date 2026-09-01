@@ -1,10 +1,13 @@
 from fastapi import FastAPI
 from app.models.db.task import Task
 from app.connection.database import Base, engine
+from app.routes import task_routes
 
 app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
+
+app.include_router(task_routes.router)
 
 @app.get("/")
 def get_home():
