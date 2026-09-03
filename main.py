@@ -12,7 +12,10 @@ app.include_router(task_routes.router)
 
 @app.get("/")
 def get_home():
-    return {"message": "server on"}
+    return {
+        "message": "server on",
+        "environment": APP_ENV
+    }
 
 @app.get("/environment")
 def get_environment():
