@@ -5,6 +5,7 @@ services:
     ports:
       - "8000:8000"
     environment:
+      APP_ENV: ${APP_ENV}
       DATABASE_URL: ${DATABASE_URL}
     volumes:
       - task-api-data:/app/data

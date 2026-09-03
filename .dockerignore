@@ -4,4 +4,4 @@ __pycache__/
 .git/
 .gitignore
 task_control.db
-.env
+.env*
