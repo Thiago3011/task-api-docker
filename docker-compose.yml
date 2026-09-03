@@ -4,6 +4,8 @@ services:
     container_name: task-api-container
     ports:
       - "8000:8000"
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
     volumes:
       - task-api-data:/app/data
 
